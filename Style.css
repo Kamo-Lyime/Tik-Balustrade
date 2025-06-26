@@ -1,0 +1,806 @@
+@font-face {
+    font-family: yoxall;
+    src: url(./Fonts\ 1/yoxall_.ttf);
+}
+:root {
+    font-size: 16px;
+    --dark001: #1a1b1c;
+    --light001: #fafcfe;
+    --red001: #ff5757;
+}
+*{
+ margin: 0%; 
+ padding: 0%;
+ box-sizing: border-box;  
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--darkgrey#a9a9a9);
+    height: 100%;
+}
+
+.home {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background-color: var(--dark001);
+    border: none;
+    top: 16px;
+    left: 16px;
+    z-index: 10;
+    
+}
+
+.hamburger:focus, .hamburger:active {
+    outline: 5px solid var(--red001);
+}
+
+.hamburger::after, 
+.hamburger::before {
+    content: ' ';
+    height: 20px;
+    border-left: 1px solid var(--light001);
+    transform: rotate(90deg);
+    margin: -3px;
+    transition: transform 0.3s ease;
+}
+
+.hamburger--active::after {
+    transform: rotate(135deg);  
+}
+
+.hamburger--active::before {
+    transform: rotate(45deg); 
+}
+
+.main-nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 40%;
+    background-color: var(--dark001);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 5;
+}
+
+.main-nav--active {
+    transform: translateX(0);
+}
+
+.main-nav a {
+    font-family: yoxall, sans-serif;
+    font-size: 3rem;
+    padding: 12px 0;
+    margin: 16px;
+    color: var(--light001);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.main-nav a:hover {
+    border-bottom: 1px solid var(--light001);
+}
+
+.main-nav a:focus, .main-nav a:active {
+    outline: 5px solid var(--red001);
+}
+
+.home {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.home__info {
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+.home__header {
+    max-width: 356px;
+    margin: 82px 0 16px 0;
+}
+home__title {
+    font-family: yoxall, sans-serif;
+    font-size: 4.125rem;
+    color: var(--dark001);
+    line-height: 105%;
+    margin-bottom: 56px;
+}
+.home__spacer {
+    display: inline-block;
+    height: 1px;
+    width: 102px;
+    background-color: var(--dark001);
+    margin-bottom: 48px;
+}
+.home__subtext {
+    font-family: Open Sans, sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: var(--dark001);
+    line-height: 165%;
+    margin-bottom: 48px;
+}
+.home__cta {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Open Sans, sans-serif;
+    font-weight: 700;
+    font-size: 0.625rem;
+    color: #fafcfe;
+    background-color: var(--red001);
+    border-radius: 50px;
+    border: 2px solid var(--dark001);
+    padding: 16px 48px;
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+.home__cta:hover {
+    background-color: var(--light001);
+    color: var(--dark001);
+}
+.home__cta:focus, .home__cta:active {
+    background-color: var (--light001);
+    color: var (--dark001);
+    outline: 5px var(--red001);
+}
+.home__cards {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 8px;
+}
+.group-one {
+    grid-column: 1 / span 1;
+    display: flex;
+    flex-direction: column;
+}
+.group-one .home__card--square {
+    background-image: 
+    url(./Images/Glass\ with\ Stainless\ Steel\ Balustrade.jpg); 
+
+}
+.group-one .home__card--large {
+    background-image: url(./Images/Frameless-Glass\ Balustrade..jpg); 
+
+    }
+.group-two{
+    grid-column: 2 / span 1;
+    display: flex;
+    flex-direction: column;
+}
+.group-two .home__card--large {
+    background-image: url(./Images/Vertical\ Stainless\ Steel\ Balustrade..jpg); 
+}
+.group-two .home__card--square {
+    background-image: url(./Images/shower\ 1.jpg); 
+}
+.home__card {
+    margin: 8px;
+    padding: 16px;
+    display: flex;
+    align-items: flex-end;
+    background-color: var(--dark001);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home__card header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.home__card header h3 a {
+    font-family: yoxall sans-serif;
+    font-size: 1rem;
+    color: var(--light001);
+    text-decoration: none;
+
+}
+
+.home__card--square {
+    height: 0;
+    padding-top: calc(100% - 32px);
+}
+
+/* ...existing code... */
+
+.home__card--large {
+    flex: auto;
+    min-height: 250px;
+}
+
+@media screen and (max-width: 1300px), screen and (max-height: 800px) {
+    .main-nav {
+        width: 100%;
+    }
+
+    .home__info,
+    .home__cards {
+        grid-column: 1 / -1;
+    }
+
+    .home__cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .home__card--large,
+    .home__card--square {
+        flex: 1 1 calc(50% - 16px);
+        height: auto;
+        padding-top: 0;
+        min-height: 200px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .group-one,
+    .group-two {
+        grid-column: 1 / -1;
+        flex-direction: column;
+    }
+
+    .home__card--large,
+    .home__card--square {
+        flex: 1 1 100%;
+        min-height: 180px;
+    }
+}
+/* Add this at the end of your existing CSS file */
+
+.home__title {
+    font-family: 'yoxall', sans-serif;
+    font-size: 2rem;
+    color: var(--dark001);
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+.home__title .divider {
+    color: var(--red001);
+    margin: 0 5px;
+}
+
+.home__title .highlight {
+    color: var(--red001);
+    font-weight: 500;
+}
+
+@media screen and (max-width: 568px) {
+    .home__title {
+        font-size: 1.4rem;
+        margin-bottom: 16px;
+    }
+
+    .home__title .divider {
+        display: block;
+        margin: 8px auto;
+    }
+}
+/* Add this at the end of your existing CSS file */
+
+.home__hours-box {
+    background-color: #ffe0e0; /* Light red background */
+    border: 2px solid var(--red001);
+    border-radius: 12px;
+    padding: 20px 30px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(182, 21, 21, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home__hours-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 0, 0, 0.15);
+}
+
+.home__hours-box .home__title {
+    font-family: 'yoxall', sans-serif;
+    font-size: 1.8rem;
+    color: var(--dark001);
+    text-align: center;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.home__hours-box .divider {
+    color: var(--red001);
+    margin: 0 10px;
+    font-weight: 700;
+}
+
+.home__hours-box .highlight {
+    color: var(--red001);
+    font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+    .home__hours-box {
+        padding: 15px 20px;
+        margin: 15px 0;
+    }
+
+    .home__hours-box .home__title {
+        font-size: 1.2rem;
+    }
+
+    .home__hours-box .divider {
+        display: block;
+        margin: 8px auto;
+    }
+}
+/* Add this at the end of your existing CSS file */
+
+.home__intro-card {
+    position: relative;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe0e0 100%);
+    border-left: 4px solid var(--red001);
+    border-radius: 0 12px 12px 0;
+    padding: 30px;
+    margin: 25px 0;
+    overflow: hidden;
+}
+
+.home__intro-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 87, 87, 0.05) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(0.8); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.home__subtext {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin: 0;
+}
+
+.home__subtext .tagline {
+    display: block;
+    font-family: 'yoxall', sans-serif;
+    font-size: 1.4rem;
+    color: var(--red001);
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.home__subtext strong {
+    color: var(--red001);
+    font-weight: 700;
+}
+
+.home__subtext a {
+    color: var(--red001);
+    text-decoration: underline;
+    font-weight: 700;
+}
+/* Add this at the end of your existing CSS file */
+
+/* Projects Page Styles */
+.projects {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.projects__header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.projects__logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.projects__title {
+    font-family: 'yoxall', sans-serif;
+    font-size: 2.5rem;
+    color: var(--dark001);
+    margin-bottom: 10px;
+}
+
+.projects__subtitle {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.projects__gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project-card__image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-card__image img {
+    transform: scale(1.1);
+}
+
+.project-card__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 87, 87, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-card__overlay {
+    opacity: 1;
+}
+
+.project-card__overlay h3 {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'yoxall', sans-serif;
+}
+
+.project-card__content {
+    padding: 25px;
+}
+
+.project-card__content h3 {
+    font-family: 'yoxall', sans-serif;
+    font-size: 1.4rem;
+    color: var(--dark001);
+    margin-bottom: 10px;
+}
+
+.project-card__content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.project-card__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.project-card__details span {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.project-card__details .type {
+    background-color: var(--red001);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+.projects__cta {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--dark001);
+    color: white;
+}
+
+.projects__cta h2 {
+    font-family: 'yoxall', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.projects__cta p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.projects__button {
+    display: inline-block;
+    background-color: var(--red001);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.projects__button:hover {
+    background-color: #ff3333;
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+    .projects__gallery {
+        grid-template-columns: 1fr;
+        padding: 30px 15px;
+    }
+    
+    .projects__title {
+        font-size: 2rem;
+    }
+}
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #cc0000;
+   position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 20px;
+}
+main.projects {
+  margin-top: 80px; /* Adjust this value based on your navbar’s height */
+  padding: 20px;    /* Optional: adds internal spacing within main */
+}
+
+/* Container for logo and menu */
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styling */
+.navbar__logo img {
+  max-height: 40px;
+}
+
+/* Standard menu styling */
+.navbar__menu {
+  list-style: none;
+  display: flex;
+}
+
+/* Space out menu items */
+.navbar__menu li {
+  margin-left: 20px;
+}
+
+/* Link styling */
+.navbar__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar__link:hover {
+  color: #ff6600;
+}
+
+/* Hide hamburger icon by default */
+.navbar__toggle {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Show hamburger icon and hide menu by default */
+  .navbar__toggle {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .navbar__menu {
+    display: none;           /* Hide navigation links initially */
+    flex-direction: column;  /* Stack the items vertically */
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .navbar__menu.active {
+    display: flex;           /* Show menu when toggled */
+  }
+  
+  .navbar__menu li {
+    margin: 10px 0;
+  }
+  
+  /* Hamburger bars styling */
+  .navbar__toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+}
+/* Active state for hamburger icon */
+.navbar__toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+/* Add this to your Style.css file */
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.navbar__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar__logo img {
+    height: 40px;
+    width: auto;
+}
+
+.navbar__motto {
+    font-family: 'yoxall', sans-serif;
+    font-size: 0.75rem;
+    color: var(--red001);
+    margin-top: 2px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__link {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark001);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar__link:hover {
+    color: var(--red001);
+}
+
+.navbar__toggle {
+    display: none;
+}
+
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+    .navbar__toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 3px 0;
+        background-color: var(--dark001);
+        transition: 0.3s;
+    }
+
+    .navbar__menu {
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding: 20px 0;
+    }
+
+    .navbar__menu.active {
+        left: 0;
+    }
+}
+
+/* Add padding to main content to account for fixed navbar */
+main {
+    margin-top: 70px;
+}
+
+/* Fix for projects page to prevent navbar overlap */
+.projects__header {
+    padding-top: 60px;
+}

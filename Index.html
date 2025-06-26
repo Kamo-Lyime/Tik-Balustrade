@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <title>Tik Balustrade</title>
+    <script>
+        function welcome() {
+            window.open("Online Quote.html");
+        }
+    </script>
+</head>
+<body>
+  <nav class="navbar">
+  <div class="navbar__container">
+    <a href="index.html" class="navbar__logo">
+      <img src="Images/TIK BALUSTRADE LOGO 400..jpg" alt="Tik Balustrade Logo" height="40">
+      <span class="navbar__motto">Affordable Quality Luxury</span>
+    </a>
+    <!-- Hamburger icon for mobile navigation -->
+    <div class="navbar__toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="navbar__menu cool-navbar">
+                <li><a href="index.html" class="navbar__link cool-link">Home</a></li>
+                <li><a href="profile.html" class="navbar__link cool-link">Projects</a></li>
+                <li><a href="Online Quote.html" class="navbar__link cool-link">Quote</a></li>
+                <li><a href="privacy.policy.html" class="navbar__link cool-link">Privacy</a></li>
+                <li><a href="terms&conditions.html" class="navbar__link cool-link">Terms</a></li>
+            </ul>
+            <style>
+                .cool-navbar {
+                    display: flex;
+                    gap: 1.5em;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    align-items: center;
+                }
+                .cool-link {
+                    position: relative;
+                    color: #ff5757;
+                    font-weight: 700;
+                    font-family: 'Open Sans', Arial, sans-serif;
+                    text-decoration: none;
+                    padding: 0.5em 1.1em;
+                    border-radius: 30px;
+                    transition: 
+                        background 0.3s cubic-bezier(.4,0,.2,1),
+                        color 0.3s cubic-bezier(.4,0,.2,1),
+                        box-shadow 0.3s cubic-bezier(.4,0,.2,1);
+                    background: linear-gradient(90deg, rgba(255,87,87,0.08) 0%, rgba(255,135,135,0.08) 100%);
+                }
+                .cool-link:hover, .cool-link:focus {
+                    background: linear-gradient(90deg, #ff5757 0%, #ff8787 100%);
+                    color: #fff;
+                    box-shadow: 0 4px 18px -6px #ff5757a0;
+                }
+                .cool-link::after {
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    width: 0;
+                    background: linear-gradient(90deg, #ff5757 0%, #ff8787 100%);
+                    border-radius: 2px;
+                    transition: width 0.3s cubic-bezier(.4,0,.2,1);
+                    position: absolute;
+                    left: 50%;
+                    bottom: 7px;
+                    transform: translateX(-50%);
+                }
+                .cool-link:hover::after, .cool-link:focus::after {
+                    width: 60%;
+                }
+                @media (max-width: 900px) {
+                    .cool-navbar {
+                        flex-direction: column;
+                        gap: 0.5em;
+                        background: #fff;
+                        border-radius: 18px;
+                        box-shadow: 0 6px 24px -8px #ff5757a0;
+                        padding: 1em 0;
+                        position: absolute;
+                        top: 60px;
+                        right: 10px;
+                        z-index: 100;
+                        min-width: 160px;
+                        display: none;
+                    }
+                    .navbar__menu.active.cool-navbar {
+                        display: flex;
+                    }
+                }
+            </style>
+  </div>
+</nav>
+    <main class="home">
+        <section class="home__info">
+            <header class="home__header">
+                <img src="Images/TIK BALUSTRADE LOGO 400..jpg" 
+                    alt="Tik Balustrade Logo"
+                    style="width: 90%; max-width: 320px; height: auto; display: block; margin: 0 auto;"
+                    class="responsive-logo"
+                />
+               <div class="home__intro-card">
+    <p class="home__subtext">
+        <span class="tagline">"Where Excellence Meets Elegance"</span><br>
+        We are from Pretoria - Nellmapius, Gauteng, South Africa; and we deliver <strong>"affordable quality luxury"</strong> straight to your beatiful space. 
+        Let our specialists transform your space with premium <em>Frameless Glass Balustrades</em>, <em>Frameless Glass Showers</em>, <em>Stainless Steel Balustrades</em>
+        and <em>Stainless Steel Gates</em> that speak sophistication.<br><br>
+
+        <span class="experience">13+ Years of Craftsmanship Excellence.</span><br>
+        Our master craftsmen combine cutting-edge design with time-tested expertise to 
+        create balustrades that aren't just safety features – they're works of art.<br><br>
+        
+        <span class="credentials">
+            Reg: 2022/736046/07. | 100% Youth Black Owned. | BBBEE Level 1.
+          <span class="credentials"></span>
+                <h1 class="home__title">
+                    Operating Areas: Gauteng | Limpopo | Mpumalanga | Free State | North West - South Africa.
+                </h1>
+                
+          </span>
+    </p>
+</div>
+ <div class="home__hours-box">
+    <h1 class="home__title">
+        TIK BALUSTRADE <span class="divider">|</span> 
+        <span class="highlight">Open:</span> Mon - Sat 9:00 am – 4:00 pm 
+        <span class="divider">|</span> 
+        <span class="highlight">Sunday:</span> Closed
+    </h1>
+</div>
+                
+                <a href="Online Quote.html" class="home__cta" onclick="welcome()">Get WhatsApp Quote</a>
+            </header>
+        </section>
+
+        <section class="home__cards">
+            <div class="group-one">
+                <div class="home__card home__card--square">
+                    <header>
+                        <img src="./Images/TIK BALUSTRADE LOGO 400..jpg" alt="Glass with Stainless Steel Balustrade" />
+                        <h3><a href="profile.html">Glass with Stainless Steel Balustrade</a></h3>
+                    </header>
+                </div>
+                <div class="home__card home__card--large">
+                    <header>
+                        <img src="./Images/TIK BALUSTRADE LOGO 400..jpg" alt="Frameless Glass Balustrade" />
+                        <h3><a href="profile.html">Frameless Glass Balustrade</a></h3>
+                    </header>
+                </div>
+            </div>
+
+            <div class="group-two">
+                <div class="home__card home__card--large">
+                    <header>
+                        <img src="./Images/TIK BALUSTRADE LOGO 400..jpg" alt="Vertical Stainless Steel Balustrade" />
+                        <h3><a href="profile.html">Vertical Stainless Steel Balustrade</a></h3>
+                    </header>
+                </div>
+                <div class="home__card home__card--square">
+                    <header>
+                        <img src="./Images/TIK BALUSTRADE LOGO 2..jpg" alt="Brawns Glass Balustrade" />
+                        <h3><a href="profile.html">Frameless Glass Showers</a></h3>
+                    </header>
+                </div>
+            </div>
+             <footer class="footer">
+        <div class="footer__container">
+            <a href="https://www.facebook.com/BuyADesignerGate/" target="_blank" rel="noopener" class="footer__social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="#fff" class="footer__icon">
+                    <circle cx="16" cy="16" r="16" fill="#1877f2"/>
+                    <path d="M22.675 16.001h-3.197v10.667h-4.266V16.001h-2.133v-3.733h2.133v-2.4c0-2.133 1.28-3.307 3.2-3.307.917 0 1.707.067 1.941.098v2.25h-1.333c-1.045 0-1.248.497-1.248 1.225v1.734h2.496l-.325 3.733z" fill="#fff"/>
+                </svg>
+                <span class="footer__social-text">Follow us on Facebook</span>
+            </a>
+            <p class="footer__copyright">
+                &copy; 2025 Tik Balustrade. All rights reserved.
+            </p>
+            <p class="footer__links">
+                <a href="privacy.policy.html" target="_blank" rel="noopener">Privacy Policy</a> | 
+                <a href="terms&conditions.html" target="_blank" rel="noopener">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+    <style>
+    .footer {
+        background-color: #ff7070;
+        color: #fff;
+        padding: 1.5em 0;
+        text-align: center;
+        font-family: 'Open Sans', Arial, sans-serif;
+    }
+    .footer__container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__social-link {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        margin-bottom: 0.5em;
+        font-size: 1.1em;
+        transition: color 0.2s;
+    }
+    .footer__social-link:hover {
+        color: #e0e0e0;
+    }
+    .footer__icon {
+        margin-right: 0.5em;
+        min-width: 28px;
+        min-height: 28px;
+    }
+    .footer__social-text {
+        font-size: 1.1em;
+    }
+    .footer__copyright,
+    .footer__links {
+        margin: 0.3em 0;
+        font-size: 0.95em;
+        word-break: break-word;
+    }
+    .footer__links a {
+        color: #fff;
+        text-decoration: underline;
+        margin: 0 0.2em;
+        transition: color 0.2s;
+    }
+    .footer__links a:hover {
+        color: #222;
+    }
+    @media (max-width: 600px) {
+        .footer__container {
+            padding: 0 0.5em;
+        }
+        .footer__social-link {
+            font-size: 1em;
+        }
+        .footer__icon {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            min-height: 24px;
+        }
+        .footer__copyright,
+        .footer__links {
+            font-size: 0.85em;
+        }
+    }
+    </style>
+            </div>
+        </section>
+    </main>
+     <footer class="footer">
+        <div class="footer__container">
+            <a href="https://www.facebook.com/BuyADesignerGate/" target="_blank" rel="noopener" class="footer__social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="#fff" class="footer__icon">
+                    <circle cx="16" cy="16" r="16" fill="#1877f2"/>
+                    <path d="M22.675 16.001h-3.197v10.667h-4.266V16.001h-2.133v-3.733h2.133v-2.4c0-2.133 1.28-3.307 3.2-3.307.917 0 1.707.067 1.941.098v2.25h-1.333c-1.045 0-1.248.497-1.248 1.225v1.734h2.496l-.325 3.733z" fill="#fff"/>
+                </svg>
+                <span class="footer__social-text">Follow us on Facebook</span>
+            </a>
+            <p class="footer__copyright">
+             
+            </p>
+        </div>
+    </footer>
+    <style>
+    .footer {
+        background-color: #ff7070;
+        color: #fff;
+        padding: 1.5em 0;
+        text-align: center;
+        font-family: 'Open Sans', Arial, sans-serif;
+    }
+    .footer__container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__social-link {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        margin-bottom: 0.5em;
+        font-size: 1.1em;
+        transition: color 0.2s;
+    }
+    .footer__social-link:hover {
+        color: #e0e0e0;
+    }
+    .footer__icon {
+        margin-right: 0.5em;
+        min-width: 28px;
+        min-height: 28px;
+    }
+    .footer__social-text {
+        font-size: 1.1em;
+    }
+    .footer__copyright,
+    .footer__links {
+        margin: 0.3em 0;
+        font-size: 0.95em;
+        word-break: break-word;
+    }
+    .footer__links a {
+        color: #fff;
+        text-decoration: underline;
+        margin: 0 0.2em;
+        transition: color 0.2s;
+    }
+    .footer__links a:hover {
+        color: #222;
+    }
+    @media (max-width: 600px) {
+        .footer__container {
+            padding: 0 0.5em;
+        }
+        .footer__social-link {
+            font-size: 1em;
+        }
+        .footer__icon {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            min-height: 24px;
+        }
+        .footer__copyright,
+        .footer__links {
+            font-size: 0.85em;
+        }
+    }
+    </style>
+       <script>
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navMenu = document.querySelector('.navbar__menu');
+
+  mobileMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+    <script type="text/javascript" src="./Functions.js"></script>
+</body>
+</html>

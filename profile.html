@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <title>Projects - Tik Balustrade</title>
+</head>
+<body>
+   <nav class="navbar">
+  <div class="navbar__container">
+    <a href="index.html" class="navbar__logo">
+      <img src="Images/TIK BALUSTRADE LOGO 400..jpg" alt="Tik Balustrade Logo" height="40">
+      <span class="navbar__motto">Affordable Quality Luxury</span>
+    </a>
+    <!-- Hamburger icon for mobile navigation -->
+    <div class="navbar__toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+   <ul class="navbar__menu cool-navbar">
+                <li><a href="index.html" class="navbar__link cool-link">Home</a></li>
+                <li><a href="profile.html" class="navbar__link cool-link">Projects</a></li>
+                <li><a href="Online Quote.html" class="navbar__link cool-link">Quote</a></li>
+                <li><a href="privacy.policy.html" class="navbar__link cool-link">Privacy</a></li>
+                <li><a href="terms&conditions.html" class="navbar__link cool-link">Terms</a></li>
+            </ul>
+            <style>
+                .cool-navbar {
+                    display: flex;
+                    gap: 1.5em;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    align-items: center;
+                }
+                .cool-link {
+                    position: relative;
+                    color: #ff5757;
+                    font-weight: 700;
+                    font-family: 'Open Sans', Arial, sans-serif;
+                    text-decoration: none;
+                    padding: 0.5em 1.1em;
+                    border-radius: 30px;
+                    transition: 
+                        background 0.3s cubic-bezier(.4,0,.2,1),
+                        color 0.3s cubic-bezier(.4,0,.2,1),
+                        box-shadow 0.3s cubic-bezier(.4,0,.2,1);
+                    background: linear-gradient(90deg, rgba(255,87,87,0.08) 0%, rgba(255,135,135,0.08) 100%);
+                }
+                .cool-link:hover, .cool-link:focus {
+                    background: linear-gradient(90deg, #ff5757 0%, #ff8787 100%);
+                    color: #fff;
+                    box-shadow: 0 4px 18px -6px #ff5757a0;
+                }
+                .cool-link::after {
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    width: 0;
+                    background: linear-gradient(90deg, #ff5757 0%, #ff8787 100%);
+                    border-radius: 2px;
+                    transition: width 0.3s cubic-bezier(.4,0,.2,1);
+                    position: absolute;
+                    left: 50%;
+                    bottom: 7px;
+                    transform: translateX(-50%);
+                }
+                .cool-link:hover::after, .cool-link:focus::after {
+                    width: 60%;
+                }
+                @media (max-width: 900px) {
+                    .cool-navbar {
+                        flex-direction: column;
+                        gap: 0.5em;
+                        background: #fff;
+                        border-radius: 18px;
+                        box-shadow: 0 6px 24px -8px #f88f8fa0;
+                        padding: 1em 0;
+                        position: absolute;
+                        top: 60px;
+                        right: 10px;
+                        z-index: 100;
+                        min-width: 160px;
+                        display: none;
+                    }
+                    .navbar__menu.active.cool-navbar {
+                        display: flex;
+                    }
+                }
+            </style>
+  </div>
+</nav>
+    <main class="projects">
+        <header class="projects__header">
+            <img src="Images/TIK BALUSTRADE LOGO 400..jpg" alt="Tik Balustrade Logo" class="projects__logo"/>
+            <h1 class="projects__title">Our Premium Projects</h1>
+            <p class="projects__subtitle">Transforming Spaces with Excellence since 2022 with 13 years of experience.</p>
+        </header>
+
+        <section class="projects__gallery">
+            <div class="project-card">
+                <div class="project-card__image">
+                    <img src="./Images/Frameless Glass with Stainless Steel Rail..jpg" alt="Frameless Glass with Stainless Steel Rail Balustrade Project">
+                    <div class="project-card__overlay">
+                        <h3>Affordable quality prices</h3>
+                    </div>
+                </div>
+                <div class="project-card__content">
+                    <h3>Frameless Glass with Stainless Steel Rail Balustrade</h3>
+                    <p>Elegant combination of tempered glass panels with brushed stainless steel posts and handrails.</p>
+                    <div class="project-card__details">
+                        <span class="location">📍 Pretoria, Gauteng</span>
+                        <span class="type">Residential</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-card__image">
+                    <img src="./Images/IMG-20230418-WA0044.jpg" alt="Square tube stainless steel with Glass Balustrade Project">
+                    <div class="project-card__overlay">
+                        <h3>Affordable quality prices</h3>
+                    </div>
+                </div>
+                <div class="project-card__content">
+                    <h3>Square tube stainless steel with Glass Balustrade</h3>
+                    <p>Minimalist design featuring 12mm glass for magnificent view.</p>
+                    <div class="project-card__details">
+                        <span class="location">📍 Joburg, Pretoria</span>
+                        <span class="type">Residential</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-card__image">
+                    <img src="./Images/IMG-20230418-WA0028.jpg" alt="Stainless Steel with glass Balustrade Project">
+                    <div class="project-card__overlay">
+                        <h3>Affordable quality prices</h3>
+                    </div>
+                </div>
+                <div class="project-card__content">
+                    <h3>Stainless Steel with glass Balustrade</h3>
+                    <p>Modern glass design in stainless steel for durability and style.</p>
+                    <div class="project-card__details">
+                        <span class="location">📍 Joburg, Gauteng</span>
+                        <span class="type">Residential</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-card__image">
+                    <img src="./Images/shower 1.jpg" alt="Shower Glass Installation Project">
+                    <div class="project-card__overlay">
+                        <h3>Custom shower glass solutions</h3>
+                    </div>
+                </div>
+                <div class="project-card__content">
+                    <h3>Shower Glass Installation</h3>
+                    <p>Seamless and modern frameless glass shower for a luxurious bathroom experience.</p>
+                    <div class="project-card__details">
+                        <span class="location">📍 Pretoria, Gauteng</span>
+                        <span class="type">Residential</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-card__image">
+                    <img src="./Images/shower 2.jpg" alt="Shower Glass Installation Project 2">
+                    <div class="project-card__overlay">
+                        <h3>Elegant and durable</h3>
+                    </div>
+                </div>
+                <div class="project-card__content">
+                    <h3>Shower Glass Installation </h3>
+                    <p>High-quality glass shower enclosure designed for both style and functionality.</p>
+                    <div class="project-card__details">
+                        <span class="location">📍 Johannesburg, Gauteng</span>
+                        <span class="type">Residential</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-card__image">
+                    <img src="./Images/IMG-20230418-WA0018.jpg" alt="Stainless steel and Glass Balustrade Project">
+                    <div class="project-card__overlay">
+                        <h3>Affordable quality prices</h3>
+                    </div>
+                </div>
+                <div class="project-card__content">
+                    <h3>Stainless steel and Glass Balustrade</h3>
+                    <p>Sophisticated glass stainless steel combination offering safety while maintaining elegance.</p>
+                    <div class="project-card__details">
+                        <span class="location">📍 Mpumalanga, South Africa</span>
+                        <span class="type">Residential</span>
+                    </div>
+                </div>
+            </div>
+        <div class="project-card">
+            <div class="project-card__image">
+                <img src="./Images/Gate 1.jpg" alt="Stainless Steel Gate Project">
+                <div class="project-card__overlay">
+                    <h3>Secure & Stylish Entry</h3>
+                </div>
+            </div>
+            <div class="project-card__content">
+                <h3>Stainless Steel Gate</h3>
+                <p>Modern stainless steel gate designed for both security and visual appeal.</p>
+                <div class="project-card__details">
+                    <span class="location">📍 Gauteng, South Africa</span>
+                    <span class="type">Residential</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-card__image">
+                <img src="./Images/stairs.jpg" alt="Stainless Steel with Glass on Staircases">
+                <div class="project-card__overlay">
+                    <h3>Modern staircase solutions</h3>
+                </div>
+            </div>
+            <div class="project-card__content">
+                <h3>Stainless Steel with Glass on Staircases</h3>
+                <p>Contemporary staircase balustrade featuring stainless steel and glass for a sleek, open look.</p>
+                <div class="project-card__details">
+                    <span class="location">📍 Gauteng, South Africa</span>
+                    <span class="type">Residential</span>
+                </div>
+            </div>
+        </div>
+         <div class="project-card">
+            <div class="project-card__image">
+                <img src="./Images/stairs 2.jpg" alt="Stainless Steel with Glass on Staircases">
+                <div class="project-card__overlay">
+                    <h3>Modern staircase solutions</h3>
+                </div>
+            </div>
+            <div class="project-card__content">
+                <h3>Stainless Steel with Glass on Staircases</h3>
+                <p>Contemporary staircase balustrade featuring stainless steel and glass for a sleek, open look.</p>
+                <div class="project-card__details">
+                    <span class="location">📍 Gauteng, South Africa</span>
+                    <span class="type">Residential</span>
+                </div>
+            </div>
+        </div>
+        </section>
+        
+
+        <section class="projects__cta">
+            <h2>Ready to Transform Your Space?</h2>
+            <p>Let us create a custom balustrade solution that perfectly matches your vision.</p>
+            <a href="Online Quote.html" class="projects__button">Get Your Free WhatsApp Quote</a>
+        </section>
+        <footer class="footer">
+        <div class="footer__container">
+            <a href="https://www.facebook.com/BuyADesignerGate/" target="_blank" rel="noopener" class="footer__social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="#fff" class="footer__icon">
+                    <circle cx="16" cy="16" r="16" fill="#1877f2"/>
+                    <path d="M22.675 16.001h-3.197v10.667h-4.266V16.001h-2.133v-3.733h2.133v-2.4c0-2.133 1.28-3.307 3.2-3.307.917 0 1.707.067 1.941.098v2.25h-1.333c-1.045 0-1.248.497-1.248 1.225v1.734h2.496l-.325 3.733z" fill="#fff"/>
+                </svg>
+                <span class="footer__social-text">Follow us on Facebook</span>
+            </a>
+            <p class="footer__copyright">
+                &copy; 2025 Tik Balustrade. All rights reserved.
+            </p>
+            <p class="footer__links">
+                <a href="privacy.policy.html" target="_blank" rel="noopener">Privacy Policy</a> | 
+                <a href="terms&conditions.html" target="_blank" rel="noopener">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+    <style>
+    .footer {
+        background-color: #ff7070;
+        color: #fff;
+        padding: 1.5em 0;
+        text-align: center;
+        font-family: 'Open Sans', Arial, sans-serif;
+    }
+    .footer__container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__social-link {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        margin-bottom: 0.5em;
+        font-size: 1.1em;
+        transition: color 0.2s;
+    }
+    .footer__social-link:hover {
+        color: #e0e0e0;
+    }
+    .footer__icon {
+        margin-right: 0.5em;
+        min-width: 28px;
+        min-height: 28px;
+    }
+    .footer__social-text {
+        font-size: 1.1em;
+    }
+    .footer__copyright,
+    .footer__links {
+        margin: 0.3em 0;
+        font-size: 0.95em;
+        word-break: break-word;
+    }
+    .footer__links a {
+        color: #fff;
+        text-decoration: underline;
+        margin: 0 0.2em;
+        transition: color 0.2s;
+    }
+    .footer__links a:hover {
+        color: #222;
+    }
+    @media (max-width: 600px) {
+        .footer__container {
+            padding: 0 0.5em;
+        }
+        .footer__social-link {
+            font-size: 1em;
+        }
+        .footer__icon {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            min-height: 24px;
+        }
+        .footer__copyright,
+        .footer__links {
+            font-size: 0.85em;
+        }
+    }
+    </style>
+    <script>
+    // Mobile menu toggle functionality
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navMenu = document.querySelector('.navbar__menu');
+
+  mobileMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+    </section>
+    </main>
+</body>
+</html>
+
+
+
