@@ -71,20 +71,90 @@
   </style>
 </head>
 <body>
-  <nav>
-    <div class="navbar__container">
-      <!-- Update the href attribute to your desired URL -->
-      <button class="cool-button" onclick="window.location.href='index.html';">
-        Back Home
-      </button>
+   <nav class="navbar">
+  <div class="navbar__container">
+    <a href="index.html" class="navbar__logo">
+      <img src="Images/TIK BALUSTRADE LOGO 400..jpg" alt="Tik Balustrade Logo" height="40">
+      <span class="navbar__motto">Affordable Quality Luxury</span>
+    </a>
+    <!-- Hamburger icon for mobile navigation -->
+    <div class="navbar__toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </div>
-    <p style="color: #fff; font-family: 'Quicksand', Arial, sans-serif; font-size: 16px; margin-top: 10px;">
-      <strong>Operating Areas:</strong> Gauteng | Limpopo | Mpumalanga | Free State | North West - South Africa.
-    </p>
-    <p style="color: #fff; font-family: 'Quicksand', Arial, sans-serif; font-size: 16px;">
-      <strong>Contact us for an affordable quote that you don't want to miss today!</strong>
-    </p>
-  </nav>
+    <ul class="navbar__menu cool-navbar">
+                <li><a href="index.html" class="navbar__link cool-link">Home</a></li>
+                <li><a href="profile.html" class="navbar__link cool-link">Projects</a></li>
+                <li><a href="onlinequote.html" class="navbar__link cool-link">Quote</a></li>
+                <li><a href="privacy.policy.html" class="navbar__link cool-link">Privacy</a></li>
+                <li><a href="terms&conditions.html" class="navbar__link cool-link">Terms</a></li>
+            </ul>
+            <style>
+                .cool-navbar {
+                    display: flex;
+                    gap: 1.5em;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    align-items: center;
+                }
+                .cool-link {
+                    position: relative;
+                    color: #ff5757;
+                    font-weight: 700;
+                    font-family: 'Open Sans', Arial, sans-serif;
+                    text-decoration: none;
+                    padding: 0.5em 1.1em;
+                    border-radius: 30px;
+                    transition: 
+                        background 0.3s cubic-bezier(.4,0,.2,1),
+                        color 0.3s cubic-bezier(.4,0,.2,1),
+                        box-shadow 0.3s cubic-bezier(.4,0,.2,1);
+                    background: linear-gradient(90deg, rgba(255,87,87,0.08) 0%, rgba(255,135,135,0.08) 100%);
+                }
+                .cool-link:hover, .cool-link:focus {
+                    background: linear-gradient(90deg, #ff5757 0%, #ff8787 100%);
+                    color: #fff;
+                    box-shadow: 0 4px 18px -6px #ff5757a0;
+                }
+                .cool-link::after {
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    width: 0;
+                    background: linear-gradient(90deg, #ff5757 0%, #ff8787 100%);
+                    border-radius: 2px;
+                    transition: width 0.3s cubic-bezier(.4,0,.2,1);
+                    position: absolute;
+                    left: 50%;
+                    bottom: 7px;
+                    transform: translateX(-50%);
+                }
+                .cool-link:hover::after, .cool-link:focus::after {
+                    width: 60%;
+               
+                    .cool-navbar {
+                        flex-direction: column;
+                        gap: 0.5em;
+                        background: #fff;
+                        border-radius: 18px;
+                        box-shadow: 0 6px 24px -8px #ff5757a0;
+                        padding: 1em 0;
+                        position: absolute;
+                        top: 60px;
+                        right: 10px;
+                        z-index: 100;
+                        min-width: 160px;
+                        display: none;
+                    }
+                    .navbar__menu.active.cool-navbar {
+                        display: flex;
+                    }
+                }
+            </style>
+  </div>
+</nav>
   
   <main>
     <h1>Welcome to TIK BALUSTRADE quotation for works of art.</h1>
@@ -196,9 +266,7 @@
     <input type="text" class="field" id="balustrade" placeholder="Your Desired Balustrade Design?">
     <input type="text" class="field" id="location" placeholder="Your Location Province, City, Street & Number?">
     <input type="text" class="field" id="dateTime" placeholder="Availability Date & Time For Measurements?">
-    <input type="text" class="field" id="names" placeholder="Your Names?">
-    <input type="text" class="field" id="phone" placeholder="Your Phone?">
-    <input type="text" class="field" id="email" placeholder="Your Email?">
+   
     <button class="btn" type="submit" style="display: flex; align-items: center; justify-content: center;">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="28" height="28" style="margin-right: 10px; filter: none;">
       <span style="font-weight: bold; color: #075e54;">Send via WhatsApp</span>
@@ -415,5 +483,13 @@
       window.open(whatsappURL, '_blank');
     });
   </script>
+       <script>
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navMenu = document.querySelector('.navbar__menu');
+
+  mobileMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
