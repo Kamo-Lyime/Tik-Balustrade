@@ -30,6 +30,17 @@ body{
     filter: blur(70px);
 }
 
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px 5px;
+    }
+    .container:after {
+        filter: blur(30px);
+        background-position: center;
+        background-size: cover;
+    }
+}
+
 .contact-box{
     max-width: 850px;
     display: grid;
